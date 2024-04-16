@@ -1,0 +1,9 @@
+services:
+  python:
+    image: jupyter/scipy-notebook
+    container_name: python
+    ports:
+      - "10000:8888"
+    command: start-notebook.sh
+    volumes:
+      - "./src:/home/jovyan/work"
